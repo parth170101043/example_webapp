@@ -30,7 +30,7 @@ pipeline {
                 script {
                     builderImage = docker.build("${ACCOUNT_REGISTRY_PREFIX}/example_webapp_builder:7a9a2749fc167fc39af2aaec4011037b95929d4f", "-f ./Dockerfile.builder .")
                   
-                    }
+                    
                 }
             }
         }
