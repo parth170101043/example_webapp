@@ -22,6 +22,9 @@ pipeline {
         }
 
         stage('Make A Builder Image') {
+             options {
+              timeout(time: 7, unit: 'MINUTES')   // timeout on this stage
+          }
             steps {
                 echo 'Starting to build the project builder docker image'
                 script {
